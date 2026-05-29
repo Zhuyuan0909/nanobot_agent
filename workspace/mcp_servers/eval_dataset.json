@@ -1,0 +1,361 @@
+[
+  {
+    "id": 1,
+    "query": "How do I reset my password?",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "reset my password",
+    "category": "english_semantic"
+  },
+  {
+    "id": 2,
+    "query": "I forgot my password and can't log in",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "reset my password",
+    "category": "english_semantic"
+  },
+  {
+    "id": 3,
+    "query": "What are the steps to recover my account access?",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "reset my password",
+    "category": "english_semantic"
+  },
+  {
+    "id": 4,
+    "query": "How much does CloudSync cost?",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "Plans",
+    "category": "english_semantic"
+  },
+  {
+    "id": 5,
+    "query": "What pricing tiers do you offer?",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "Pricing",
+    "category": "english_semantic"
+  },
+  {
+    "id": 6,
+    "query": "I want to pay with Alipay, is that supported?",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "payment methods",
+    "category": "english_semantic"
+  },
+  {
+    "id": 7,
+    "query": "What credit cards can I use to pay?",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "payment methods",
+    "category": "english_semantic"
+  },
+  {
+    "id": 8,
+    "query": "How do I switch from paying every month to paying once a year?",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "monthly to annual",
+    "category": "english_semantic"
+  },
+  {
+    "id": 9,
+    "query": "My payment didn't go through, what now?",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "payment fails",
+    "category": "english_semantic"
+  },
+  {
+    "id": 10,
+    "query": "Where can I find my receipts for tax purposes?",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "invoices",
+    "category": "english_semantic"
+  },
+  {
+    "id": 11,
+    "query": "I want my money back, how do refunds work?",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "refund policy",
+    "category": "english_semantic"
+  },
+  {
+    "id": 12,
+    "query": "How do I generate an access token for the API?",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "API key",
+    "category": "english_semantic"
+  },
+  {
+    "id": 13,
+    "query": "What's the request limit for API calls?",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "rate limit",
+    "category": "english_semantic"
+  },
+  {
+    "id": 14,
+    "query": "How do I configure webhook notifications?",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "webhook",
+    "category": "english_semantic"
+  },
+  {
+    "id": 15,
+    "query": "My data sync has been running for hours without finishing",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "sync is stuck",
+    "category": "english_semantic"
+  },
+  {
+    "id": 16,
+    "query": "I keep getting logged out, what should I check?",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "log in",
+    "category": "english_semantic"
+  },
+  {
+    "id": 17,
+    "query": "怎么注册CloudSync账号？",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "register an account",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 18,
+    "query": "如何重置我的密码？",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "reset my password",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 19,
+    "query": "可以用支付宝付款吗？",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "payment methods",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 20,
+    "query": "怎么升级我的套餐计划？",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "upgrade my plan",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 21,
+    "query": "如何获取API密钥？",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "API key",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 22,
+    "query": "数据同步失败了一直卡着不动",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "sync is stuck",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 23,
+    "query": "我的仪表盘加载速度很慢",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "dashboard loading",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 24,
+    "query": "API接口有哪些限制？",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "Rate limits",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 25,
+    "query": "怎么删除我的账户？",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "delete my account",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 26,
+    "query": "退款政策是什么？",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "refund policy",
+    "category": "chinese_crosslingual"
+  },
+  {
+    "id": 27,
+    "query": "CS-ERR-5001",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "CS-ERR-5001",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 28,
+    "query": "I keep seeing error 429 on API calls",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "429",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 29,
+    "query": "CS-ERR-4003 permission denied",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "CS-ERR-4003",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 30,
+    "query": "CS-ERR-4007 quota exceeded",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "CS-ERR-4007",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 31,
+    "query": "CS-ERR-4012 export file too large",
+    "expected_source_file": "troubleshooting.md",
+    "expected_heading_keyword": "CS-ERR-4012",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 32,
+    "query": "Getting HTTP 401 Unauthorized from the API",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "error codes",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 33,
+    "query": "API returns 403 Forbidden",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "error codes",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 34,
+    "query": "What does error 500 mean from your API?",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "error codes",
+    "category": "error_code_exact"
+  },
+  {
+    "id": 35,
+    "query": "How to cook spaghetti bolognese?",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 36,
+    "query": "What's the weather forecast for tomorrow?",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 37,
+    "query": "Tell me a funny joke",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 38,
+    "query": "Who won the Champions League last year?",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 39,
+    "query": "How to use pandas groupby in Python?",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 40,
+    "query": "Can you recommend a good restaurant in Beijing?",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 41,
+    "query": "What's the capital of France?",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 42,
+    "query": "Help me write a resignation letter",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "negative_irrelevant"
+  },
+  {
+    "id": 43,
+    "query": "API",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "API key",
+    "category": "boundary"
+  },
+  {
+    "id": 44,
+    "query": "billing",
+    "expected_source_file": "billing.md",
+    "expected_heading_keyword": "billing",
+    "category": "boundary"
+  },
+  {
+    "id": 45,
+    "query": "password",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "reset",
+    "category": "boundary"
+  },
+  {
+    "id": 46,
+    "query": "delete",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "delete my account",
+    "category": "boundary"
+  },
+  {
+    "id": 47,
+    "query": "",
+    "expected_source_file": null,
+    "expected_heading_keyword": null,
+    "expects_no_match": true,
+    "category": "boundary"
+  },
+  {
+    "id": 48,
+    "query": "What is the exact limit for free tier API requests per minute and what happens when I exceed it?",
+    "expected_source_file": "api.md",
+    "expected_heading_keyword": "Rate limits",
+    "category": "boundary"
+  },
+  {
+    "id": 49,
+    "query": "sync dashboard billing API account login payment password webhook refund invoice upgrade delete register mobile connection data export",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "",
+    "category": "boundary"
+  },
+  {
+    "id": 50,
+    "query": "CloudSync怎么用？",
+    "expected_source_file": "general.md",
+    "expected_heading_keyword": "register",
+    "category": "boundary"
+  }
+]

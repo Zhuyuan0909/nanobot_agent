@@ -1,0 +1,54 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "workspace",
+      "model": "deepseek-chat",
+      "provider": "deepseek",
+      "maxTokens": 4096,
+      "temperature": 0.1,
+      "timezone": "Asia/Shanghai",
+      "unifiedSession": true
+    }
+  },
+  "providers": {
+    "deepseek": {
+      "apiKey": "your-deepseek-api-key",
+      "apiBase": "https://api.deepseek.com"
+    }
+  },
+  "channels": {
+    "sendProgress": true,
+    "sendMaxRetries": 3,
+    "feishu": {
+      "enabled": true,
+      "appId": "your-feishu-app-id",
+      "appSecret": "your-feishu-app-secret",
+      "encryptKey": "",
+      "verificationToken": "",
+      "allowFrom": ["your-feishu-user-open-id"],
+      "domain": "feishu",
+      "groupPolicy": "mention",
+      "streaming": true
+    },
+    "dingtalk": {
+      "enabled": true,
+      "clientId": "your-dingtalk-client-id",
+      "clientSecret": "your-dingtalk-client-secret",
+      "allowFrom": ["*"]
+    }
+  },
+  "tools": {
+    "mcpServers": {
+      "ticket": {
+        "command": "python",
+        "args": ["workspace/mcp_servers/ticket_server.py"],
+        "toolTimeout": 30
+      },
+      "rag": {
+        "command": "python",
+        "args": ["workspace/mcp_servers/rag_server.py"],
+        "toolTimeout": 60
+      }
+    }
+  }
+}
