@@ -19,9 +19,41 @@ The knowledge base covers 4 topic areas, pre-indexed by the RAG server:
 
 ## Query Workflow
 
+### Step 0: Diagnose — Is This Question Answerable?
+
+**Before searching, pause and classify the user's question.** A vague question searched blindly produces irrelevant results and wastes the user's time. A good Agent diagnoses first, searches second.
+
+**Vague / under-specified (DO NOT search yet — ask clarifying questions first):**
+- Missing key details: "Something's wrong with my data", "It's not working", "I have a problem"
+- Ambiguous scope: "Help me with billing", "Tell me about the API", "I need account help"
+- No error context: "I got an error", "The sync failed" (which error? which sync?)
+- Broad complaints: "The dashboard is messed up", "My account is broken"
+
+**Specific / actionable (proceed to Step 1 and search immediately):**
+- Contains error codes: "CS-ERR-5001", "Getting 429 errors", "Error 401 on API"
+- Names exact features: "How to set up a webhook?", "Where to download invoices?"
+- Clear goal + context: "I want to pay with Alipay", "Dashboard takes 30 seconds to load"
+- Step-by-step requests: "How do I reset my password?", "Steps to upgrade from Free to Starter"
+
+**Diagnosis Rules:**
+1. Ask at most **1-2 clarifying questions** in a single turn. Do NOT ask more than 2.
+2. Questions should narrow the scope: topic area, error code, what the user was doing, what they expected vs what happened.
+3. After the user replies, proceed to Step 1 (search) immediately — do NOT ask a second round of clarification.
+4. If the user insists the problem is urgent (outage, data loss, security), skip diagnosis and escalate directly.
+
+**Diagnosis Reply Template:**
+```
+I'd love to help! To find the right answer quickly, could you tell me:
+
+1. [Specific question 1 — e.g., "What error message are you seeing?"]
+2. [Specific question 2 — e.g., "Which part of CloudSync were you using when this happened?"]
+
+This will help me narrow down the solution for you.
+```
+
 ### Step 1: Analyze the Question
 
-Extract keywords and identify the topic area. Determine whether the question is a focused lookup (single topic) or broad question (spans multiple topics).
+Identify the topic area (General / Billing / API / Troubleshooting) and extract the core keywords. If the question spans multiple topics, note all relevant areas.
 
 ### Step 2: Search the Knowledge Base with RAG
 
@@ -95,6 +127,32 @@ Judge each match as **complete** or **partial**:
 3. **Low-score match** (score < 0.3) — Nothing relevant → create ticket immediately
 
 ## Example Interactions
+
+### Multi-Turn Diagnosis (vague → clarify → search)
+
+**User:** "Something's wrong with my data"
+**Agent:** *Classify as VAGUE — no error code, no specifics.*
+→ Respond: "I'd love to help! To find the right answer quickly, could you tell me: 1) What exactly looks wrong — is the data missing, incorrect, or not syncing? 2) Are you seeing any error codes? This will help me narrow down the solution."
+→ Do NOT search yet.
+
+**User:** "The sync is stuck and I see CS-ERR-5001"
+**Agent:** *Now specific — has error code + symptom.*
+→ Search: `mcp_rag_search_knowledge_base(query="data sync stuck CS-ERR-5001", top_k=5, alpha=0.5)` → troubleshooting.md, score 0.82 → Respond with solution.
+
+---
+
+**User:** "Help me with billing"
+**Agent:** *Classify as VAGUE — ambiguous scope.*
+→ Respond: "Sure! To point you in the right direction — are you looking to 1) upgrade your plan, 2) check an invoice, 3) update payment method, or 4) something else?"
+→ Do NOT search yet.
+
+**User:** "I want to switch from monthly to yearly"
+**Agent:** *Now specific.*
+→ Search: `mcp_rag_search_knowledge_base(query="switch from monthly to annual billing", top_k=5, alpha=0.3)` → billing.md, score 0.85 → Respond with steps.
+
+---
+
+### Direct Search (specific → search immediately)
 
 **User:** "How do I reset my password?"
 **Action:** Call `mcp_rag_search_knowledge_base(query="How do I reset my password?", top_k=5, alpha=0.3)` → Top result: general.md, "How to reset my password?", score 0.84 → Complete match → Respond with steps
